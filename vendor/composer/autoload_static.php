@@ -11,13 +11,26 @@ class ComposerStaticInit3fb28d1279448e7fc375769c2c4bba3d
     );
 
     public static $prefixLengthsPsr4 = array (
+        'T' => 
+        array (
+            'Tuupola\\Middleware\\' => 19,
+        ),
         'S' => 
         array (
             'Slim\\' => 5,
         ),
+        'R' => 
+        array (
+            'RKA\\' => 4,
+        ),
         'P' => 
         array (
+            'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
+        ),
+        'N' => 
+        array (
+            'Neomerx\\Cors\\' => 13,
         ),
         'I' => 
         array (
@@ -30,13 +43,29 @@ class ComposerStaticInit3fb28d1279448e7fc375769c2c4bba3d
     );
 
     public static $prefixDirsPsr4 = array (
+        'Tuupola\\Middleware\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/tuupola/cors-middleware/src',
+        ),
         'Slim\\' => 
         array (
             0 => __DIR__ . '/..' . '/slim/slim/Slim',
         ),
+        'RKA\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/akrabat/rka-slim-session-middleware/RKA',
+        ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Neomerx\\Cors\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/neomerx/cors-psr7/src',
         ),
         'Interop\\Container\\' => 
         array (
@@ -46,6 +75,10 @@ class ComposerStaticInit3fb28d1279448e7fc375769c2c4bba3d
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
         ),
+    );
+
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/..' . '/bryanjhv/slim-session/src',
     );
 
     public static $prefixesPsr0 = array (
@@ -63,6 +96,7 @@ class ComposerStaticInit3fb28d1279448e7fc375769c2c4bba3d
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit3fb28d1279448e7fc375769c2c4bba3d::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit3fb28d1279448e7fc375769c2c4bba3d::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit3fb28d1279448e7fc375769c2c4bba3d::$fallbackDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit3fb28d1279448e7fc375769c2c4bba3d::$prefixesPsr0;
 
         }, null, ClassLoader::class);
